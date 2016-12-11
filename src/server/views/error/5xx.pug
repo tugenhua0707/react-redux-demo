@@ -1,0 +1,27 @@
+doctype html
+- var title = 'demo测试'
+html
+  head
+    meta(charset="UTF-8")
+    title= title
+    meta(name="viewport", content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1,user-scalable=0")
+    meta(name="format-detection", content="telephone=no")
+    meta(content="yes" name="apple-mobile-web-app-capable")
+    meta(content="black" name="apple-mobile-web-app-status-bar-style")
+  body
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          .ionic-body active-preview
+            .bar.bar-header.bar-light(style="background-image:none; border-bottom: 1px solid #DEDEDE")
+              .icon(style="z-index: 1" onclick="back()")
+                .ion-ios-arrow-left
+              .h1.title 服务器出错－500
+            .content.has-header.overflow-scroll(style="overflow-x: hidden; overflow-y: auto; background-color:#F2F2F2")
+              .scroll(style="overflow-x: hidden; overflow-y:auto; text-align:center;")
+                p #{err}
+       
+  script.
+    function back(){
+      history.back();
+    }

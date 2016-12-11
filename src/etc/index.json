@@ -1,0 +1,30 @@
+{
+  "code": 0,
+  "data": {
+    "liked": false,  
+    "joinCount": 0,  
+    "joinList":["","group2/M00/00/AE/wKgBs1eXX_2AKNxWAABWVmkYaBM467.jpg"],
+    "topic": {
+      "content": "啊啊啊啊啊",  
+      "icon": "1",
+      "id": 1,          
+      "postId": 1,      
+      "likedCount": 0,  
+      "name": "今天的天气不错啊！",   
+      "publishTime": "2016-11-03 14:33:55",
+      "replyCount": 0,     
+      "status": 1
+    },
+    "topicOptionList": [
+      {
+        "id": 2,
+        "option": "错",
+        "orde": 1,
+        "status": 0,
+        "topicId": 1,
+        "voteCount": 0,
+        "voted":false
+      }
+    ]
+  }
+}

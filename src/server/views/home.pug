@@ -1,0 +1,34 @@
+doctype html
+- var title = 'demo测试'
+html
+  head
+    meta(charset="UTF-8")
+    base(href='/')
+    title= title
+    link(rel="dns-prefetch", href="//cdn.bootcss.com")
+    meta(name="viewport", content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1,user-scalable=0")
+    meta(http-equiv="X-UA-Compatible",content="IE=edge,chrome=1") 
+    link(rel="stylesheet", type="text/css", href="static/sns.css")
+  body(style="overflow-x:hidden;")
+    #app
+      !=__HTML__
+    script.
+      var tokenKey = 'JSESSIONID';
+      var tokenValue = null;
+      var array = document.cookie ? document.cookie.split("; ") : [];
+      for(var i = 0; i < array.length; i++){
+        var pair = array[i].split("=");
+        if(pair[0] == tokenKey)
+          tokenValue = pair[1]
+      }
+      var __REDUX_STATE__ =  !{JSON.stringify(__REDUX_STATE__)} || {};
+      __REDUX_STATE__.utils.token = tokenValue||__REDUX_STATE__.utils.token;
+      
+    script(src="static/common/react.min.js")
+    script(src="static/common/react-dom.min.js")
+    script(src="static/libs/jquery-1.11.0.min.js")
+    script(src="static/bundle.js")
+    script.
+      window.onerror = function(sMessage, sUrl, sLine){
+        alert('there is an error: ' + sMessage + ' located in ' + sUrl + ' in line ' +sLine);
+      };
